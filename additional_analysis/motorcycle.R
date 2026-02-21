@@ -231,7 +231,7 @@ children<-left_join(children, children_pop, by=c("cbsa"="GEOID"))
 children<-children%>%
   mutate(rate= count/child_pop*100000)
 
-write.csv(children, "data/children_ratebyusergroup.csv")
+# write.csv(children, "data/children_ratebyusergroup.csv")
 
 walk_children<- children%>%
   filter(PER_TYP==5)
